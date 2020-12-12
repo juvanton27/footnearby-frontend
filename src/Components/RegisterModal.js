@@ -77,18 +77,20 @@ const onRegister = (e) => {
 
 const onUserRegistration = (userData) => {
   let messageBoard = document.querySelector("#messageBoardRegisterSucces");
+  messageBoard.classList.remove("d-blocks");
   console.log("onUserRegistration", userData);
   const user = {...userData, isAutenticated:true };
+  messageBoard.innerHTML = "Registering succeeded !";
+  messageBoard.classList.add("d-block");
   setUserSessionData(user);
   // re-render the navbar for the authenticated user
   Navbar();
   RedirectUrl("/");
-  messageBoard.innerHTML = "Registering succeeded !";
-  messageBoard.classList.add("d-block");  
 };
 
 const onError = (err) => {
   let messageBoard = document.querySelector("#messageBoardRegister");
+  messageBoard.classList.remove("d-blocks");
   let errorMessage = "";
   if (err.message.includes("409")) errorMessage = "This user is already registered.";
   else errorMessage = err.message;

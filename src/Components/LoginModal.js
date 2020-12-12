@@ -82,6 +82,7 @@ const onLogin = (e) => {
 
 const onUserLogin = (userData) => {
   let messageBoard = document.querySelector("#messageBoardLoginSucces");
+  messageBoard.classList.remove("d-blocks");
   console.log("onUserLogin:", userData);
   const user = { ...userData, isAutenticated: true };
   setUserSessionData(user);
@@ -94,6 +95,7 @@ const onUserLogin = (userData) => {
 
 const onError = (err) => {
   let messageBoard = document.querySelector("#messageBoardLogin");
+  messageBoard.classList.remove("d-blocks");
   let errorMessage = "";
   if (err.message.includes("401")) errorMessage = "Wrong username or password.";
   else errorMessage = err.message;

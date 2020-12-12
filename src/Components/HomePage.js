@@ -251,7 +251,6 @@ function initMap() {
       zoom : 15,
       center : {lat:50.8503396,lng:4.3517103},
       mapTypeControl: false,
-      title: adress,
       icon: icon,
   });
   geocoder = new google.maps.Geocoder();

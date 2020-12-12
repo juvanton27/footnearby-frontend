@@ -187,6 +187,7 @@ const onAddCourt = (e) => {
 
 const onCourtAdded = (data) => {
   let messageBoard = document.querySelector("#messageBoardAddSucces");
+  messageBoard.classList.remove("d-blocks");
   console.log(data);
   // re-render the navbar for the authenticated user  
   RedirectUrl("/");
@@ -196,6 +197,7 @@ const onCourtAdded = (data) => {
 
 const notif = () => {
   let messageBoard = document.querySelector("#messageBoardAddFail");
+  messageBoard.classList.remove("d-blocks");
   RedirectUrl("/");
   messageBoard.innerHTML = `You must first <a class="text-success" href="#" data-toggle="modal" data-dismiss="modal" data-target="#login">login</a>`;
   messageBoard.classList.add("d-block");  

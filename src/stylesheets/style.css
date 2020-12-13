@@ -26,3 +26,35 @@ input:valid :not(#search){
   border-bottom: 1px solid #ffc107;
   border-radius: 0;
 }
+.deletebtn {
+  text-align: right;
+  color: black;
+  background-color: red;
+}
+.userText {
+  margin-top: 2rem;
+  color : white;
+  width:100%;
+  font-weight: bold;
+  font-size: 115%;
+  text-align: center;
+  list-style-type: none;
+ 
+}
+.user {
+  background-image: url(../images/admin-page.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+h5 {
+  text-align: center;
+  margin-top: 1rem !important;
+  color : white;
+}
+#page {
+  height: 100%;
+  width: 100%;
+  
+}

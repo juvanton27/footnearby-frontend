@@ -18,6 +18,8 @@ const HomePage = async (search) => {
     <div id="map" class="col position-fixed w-50" style="margin-left: 50%; height: 93vh;"></div>
   </div>
   `;
+
+  
   if(search===undefined){
     setLayout("Home");
 
@@ -52,6 +54,7 @@ const HomePage = async (search) => {
       .then(() => initMap())
       .catch((err) => onError(err));
   }
+  
 };
 /******************************************************
  *                COURTS LIST
